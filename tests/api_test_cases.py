@@ -1,5 +1,7 @@
-import pytest, requests, json
-from pytest-schema import schema
+import pytest
+import requests
+import json
+from pytest_schema import schema
 headers = {"Content-Type":"application/json","charset":"UTF-8"}
 
 response_schema = {
@@ -28,7 +30,6 @@ def test_verify_response_has_only_1_record():
     response = requests.get(url, headers = headers)
     assert response.status_code == 200
     content = json.loads(response.text)
-    assert type(content) == dict
     print(" API {} returns only 1 record".format(url))
     assert content['id'] == 1
     assert schema(response_schema) == content

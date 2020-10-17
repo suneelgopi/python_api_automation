@@ -1,6 +1,6 @@
 ## Prerequisites
 
-api_automation project requires Python 3 and pip installed. 
+python_api_automation project requires Python 3 and pip installed. 
 To verify if you have both packages installed run the following commands:
 
 `python3 --version` <br>
@@ -24,7 +24,7 @@ If there is a permissions error add a `--user` flag to the end of the command.
 ## To Run
 
 ### Run all tests
-change your working directory to api_automation project
+change your working directory to python_api_automation project
 
 `pytest --html=report.html --self-contained-html tests/`
 
